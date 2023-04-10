@@ -1,0 +1,49 @@
+{% load static %} {% include 'header.html' %}
+
+<!-- HERO START -->
+{% for package in package %}
+<div class="container col-xxl-12 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-lg-6">
+      <h5>Package Details</h5>
+      <p>
+        {{package.package_details_subtitle}}
+      </p>
+
+      <h6>Places we cover</h6>
+      <p>
+        {{package.package_details}}
+      </p>
+
+      <span class="badge text-bg-danger rounded-pill my-4">₹ 24,999</span>
+      <span class="badge text-bg-danger rounded-pill my-4">7 Days</span>
+
+
+      
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">
+          Contact Us
+        </button>
+      </div>
+    </div>
+    <div class="col-10 col-sm-8 col-lg-6">
+      <h3 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        {{package.title}}
+      </h3>
+      <p class="lead">
+{{package.subtitle}}
+      </p>
+      <img
+        src="/static/assets/{{package.image.url}}"
+        class="d-block mx-lg-auto img-fluid package-card"
+        alt="hero"
+        loading="lazy"
+      />
+
+    </div>
+  </div>
+</div>
+<!-- HERO END -->
+{% endfor %}
+
+{% include 'footer.html' %}
