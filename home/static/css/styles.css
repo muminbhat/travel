@@ -108,3 +108,12 @@
   border-radius: 20px;
   }
   
+
+a {
+  text-decoration: none!important;
+}
+
+.card {
+  border-color:white;
+}
+
